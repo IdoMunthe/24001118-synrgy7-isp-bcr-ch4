@@ -40,5 +40,5 @@ function onRequest(req, res) {
 const server = http.createServer(onRequest)
 
 server.listen(PORT, 'localhost', () => {
-  console.log(`Server sudah berjalan, Silahkan buka http://localhost:${PORT}/` )
+  console.log(`access here: http://localhost:${PORT}/` )
 })
