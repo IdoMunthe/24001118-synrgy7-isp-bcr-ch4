@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "Project HTTP Server dan DOM",
   "main": "server/index.js",
-  "author": "Fikri Rahmat Nurhidayat <fnurhidayat@binar.co.id>",
+  "author": "Ido Munthe <idomunthe52@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "start:dev": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "http": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }

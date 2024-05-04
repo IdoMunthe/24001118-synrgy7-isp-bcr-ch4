@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Car Rental</title>
+        <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="./css/custom.css" type="text/css" rel="stylesheet" />
+        <link href="./css/cari-mobil.css" type="text/css" rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+            integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+        <style>
+            .select2-selection {
+                width:100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="desktop  navbar-expand">
+                <div class="blue-box"></div>
+                <ul>
+                    <a href=".">Our Services</a>
+                    <a href=".">Why Us</a>
+                    <a href=".">Testimonial</a>
+                    <a href=".">FAQ</a>
+                    <button class="button">Register</button>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main-section">
+                <div class="words">
+                    <h1>Sewa & Rental Mobil Terbaik di kawasan Malang</h1>
+                    <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau.
+                        Selalu siap
+                        melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+                </div>
+                <div class="picture">
+                    <div class="car-background"></div>
+                    <img src="https://res.cloudinary.com/dkvhcraan/image/upload/v1714810129/car_e6dsjs.png" alt="">
+                </div>
+            </div>
+
+            <section id="section-filter-car" class="row gy-2 gx-3 align-items-center d-flex justify-content-center py-3 bg-white cari-mobil mx-auto rounded-3 position-absolute translate-middle start-50 shadow bg-body pb-4" id="form-cari-mobil">
+                <div class="filter-car d-flex align-items- justify-content-center container gap-3 rounded">
+                    <div class="d-flex gap-3 flex-wrap w-100">
+                        
+                        <div class="col-auto ml-2">
+                            <div class="form-group">
+                                <label class="mb-2">Tipe Driver</label>
+                                <select class="form-select" data-placeholder="Pilih Tipe Driver" id="tipe-driver">
+                                    <option value="">Pilih Tipe Driver</option>
+                                    <option value="dengan-sopir">
+                                        Dengan Sopir
+                                    </option>
+                                    <option value="tanpa-sopir">
+                                        Tanpa Sopir (Lepas Kunci)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="form-group">
+                                <label class="mb-2">Tanggal</label>
+                                <input type="date" class="form-control" id="tanggal" />
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="form-group">
+                                <label class="mb-2">Waktu Jemput / Ambil</label>
+                                <input type="time" class="form-control" id="available-at">
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <div class="form-group">
+                                <label class="mb-2">Jumlah Penumpang (Optional)</label>
+                                <input type="number" min="0" class="form-control" id="jumlah-penumpang" />
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button class="button" id="search-button" disabled>
+                                Cari Mobil
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="section-car-list" class="section-car-list">
+                <div class="container" id="container-cars">
+                    <div class="row" id="row-cars">
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="box1">
+                <p>Jalan Suroyo No. 161 Mayangan Kota</p>
+                <p>Probolonggo 672000</p>
+                <p>binarcarrental@gmail.com</p>
+                <p>081-233-334-808</p>
+            </div>
+            <div class="box2">
+                <p>Our Services</p>
+                <p>Why Us</p>
+                <p>Testimonial</p>
+                <p>FAQ-section</p>
+            </div>
+            <div class="box3">
+                <p>Connect with Us</p>
+                <div class="social-media">
+                    <img src="https://res.cloudinary.com/dkvhcraan/image/upload/v1714810329/list_item_iadfv3.png" alt="">
+                </div>
+            </div>
+            <div class="box4">
+                <p>Copyright Binar 2024</p>
+                <div class="blue-box"></div>
+            </div>
+        </footer>
+
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./scripts/bootstrap.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    function openNav() {
+        document.getElementById("mySidepanel").style.width = "220px";
+        document.getElementsByClassName("backdrop")[0].style.display = "block";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementsByClassName("backdrop")[0].style.display = "none";
+    }
+</script>
+<script>
+  $(() => {
+    $('.select2').select2({
+      theme: 'bootstrap-5',
+      placeholder: function(){
+        $(this).data('placeholder');
+      },
+      allowClear: true
+    })
+  })
+</script>
+<script type="text/javascript" src="./scripts/binar.js"></script>
+<script type="text/javascript" src="./scripts/app.example.js"></script>
+<script type="text/javascript" src="./scripts/car.example.js"></script>
+<script type="text/javascript" src="./scripts/main.example.js"></script>
