@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const cars = require("../data/cars.original.json");
 
+
 const ALLOWED_CAPACITY = [
   2,
   4,
